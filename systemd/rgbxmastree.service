@@ -1,0 +1,15 @@
+# rgbxmastree.service
+[Unit] 
+Description=PiHut RGB Christmas tree
+Documentation=https://github.com/Scott8586/rgbxmastree
+
+[Service] 
+WorkingDirectory=/home/srp/git/rgbxmastree
+Type=simple 
+User=srp 
+
+ExecStart=/usr/bin/python3 /home/srp/git/rgbxmastree/tree_random.py red green blue orange purple yellow
+
+[Install] 
+WantedBy=multi-user.target
+
